@@ -1,0 +1,33 @@
+.navbar .topnav {
+    background-color: #addfad;  
+    overflow: hidden;
+  }
+  .navbar .topnav a {
+  font-family: Helvetica, sans-serif;
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 0.8px;
+  }
+.topnav a:hover {
+    background-color: #cae7ca;
+    
+    transition: 0.3s;
+  }
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+/* #user span{
+  font-family: Helvetica, sans-serif;
+    float: right;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 0.6px;
+  } */

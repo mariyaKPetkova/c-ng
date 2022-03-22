@@ -1,0 +1,15 @@
+footer{
+    padding: 10px;
+    margin: 10px 0px;
+    background-color:#addfad; 
+    color: white;
+    text-align: center;
+    font-size: 16px;
+     letter-spacing: 0.6px;
+     font-family: Helvetica, sans-serif;
+     text-transform: uppercase;
+   }
+   #footer{
+     font-weight: bold;
+    color: #014421;
+   }
