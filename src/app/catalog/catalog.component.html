@@ -1,2 +1,4 @@
 
-<div>hello there</div>
+<div *ngFor="let card of cardList">
+    <app-card [card]="card"></app-card>
+</div>
