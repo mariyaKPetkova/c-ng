@@ -1,6 +1,6 @@
-<article>
-    <img src=`{{card?.imageUrl}}` alt="">
-    <span>Name:{{card?.name}}</span>
-    <span>Location:{{card?.location}}</span>
-    <button>Details</button>
-</article>
+<li class="card">
+    <span id="name">Name:{{card?.name}}</span>
+    <span id="location">Location:{{card?.location}}</span>
+    <img src={{card?.imageUrl}} alt="">
+    <button id="details">Details</button>
+</li>
