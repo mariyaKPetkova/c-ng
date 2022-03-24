@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { CardService } from './card.service';
 import { CardComponent } from './card/card.component';
+import { UserModule } from './user/user.module';
 
 
 @NgModule({
@@ -17,12 +18,14 @@ import { CardComponent } from './card/card.component';
     HeaderComponent,
     FooterComponent,
     CatalogComponent,
-    CardComponent
+    CardComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    UserModule
   ],
   providers: [
     CardService
