@@ -10,6 +10,7 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { CardService } from './card.service';
 import { CardComponent } from './card/card.component';
 import { UserModule } from './user/user.module';
+import { CreateComponent } from './create/create.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { UserModule } from './user/user.module';
     FooterComponent,
     CatalogComponent,
     CardComponent,
+    CreateComponent,
     
   ],
   imports: [
