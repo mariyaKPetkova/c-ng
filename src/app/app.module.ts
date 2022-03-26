@@ -11,6 +11,7 @@ import { CardService } from './card.service';
 import { CardComponent } from './card/card.component';
 import { UserModule } from './user/user.module';
 import { CreateComponent } from './create/create.component';
+import { DetailsComponent } from './details/details.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { CreateComponent } from './create/create.component';
     CatalogComponent,
     CardComponent,
     CreateComponent,
+    DetailsComponent,
     
   ],
   imports: [

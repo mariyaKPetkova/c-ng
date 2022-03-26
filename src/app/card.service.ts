@@ -13,4 +13,7 @@ export class CardService {
   loadCardList(): Observable<ICard[]>{
    return this.http.get<ICard[]>(`${apiUrl}/data/catalog`)
   }
+  loadCard(id: string): Observable<ICard>{
+    return this.http.get<ICard>(`${apiUrl}/data/catalog/${id}`)
+   }
 }
