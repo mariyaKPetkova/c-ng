@@ -1,6 +1,7 @@
-#ul-catalog{
+#ul-catalog {
   background-color: rgb(216, 247, 216);
   display: grid;
-  grid-template-columns: repeat(3, 350px);
+  grid-template-columns: repeat(4, 300px);
   gap: 12px;
+  justify-content: center;
 }

@@ -6,6 +6,11 @@ import { DetailsComponent } from './details/details.component';
 
 const routes: Routes = [
   {
+    path: '',
+    pathMatch: 'full',
+    component: CatalogComponent
+  },
+  {
     path: 'catalog',
     children: [
       {

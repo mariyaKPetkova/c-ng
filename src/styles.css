@@ -88,7 +88,7 @@ video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article,
+ article,
 aside,
 details,
 figcaption,
@@ -131,4 +131,4 @@ table {
 }
 *{
   font-family: Arial, Helvetica, sans-serif;
-}
+} 
