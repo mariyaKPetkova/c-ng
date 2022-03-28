@@ -1,1 +1,36 @@
-<p>create works!</p>
+<form #form="ngForm" (ngSubmit)="createHandler(form)">
+    <fieldset>
+        <legend>Add new Cave</legend>
+
+        <label>Name</label>
+        <input type="text" name="name" id="name" #nameInput="ngModel" ngModel required minlength="3" />
+        <ul *ngIf="nameInput.invalid && nameInput.touched" class="errors">
+            <li *ngIf="nameInput.errors?.['required']">Name is required.</li>
+            <li *ngIf="nameInput.errors?.['minlength']">Name must be at least 3 charecters long.</li>
+        </ul>
+
+        <label >Location: </label>
+        <input type="text" name="location" id="location" #locationInput="ngModel" ngModel required minlength="3" />
+        <ul *ngIf="locationInput.invalid && locationInput.touched" class="errors">
+            <li *ngIf="locationInput.errors?.['required']">Name is required.</li>
+            <li *ngIf="locationInput.errors?.['minlength']">Name must be at least 3 charecters long.</li>
+        </ul>
+
+        <label >Description: </label>
+        <input name="description" id="description" #descriptionInput="ngModel" ngModel required minlength="3" />
+        <ul *ngIf="descriptionInput.invalid && descriptionInput.touched" class="errors">
+            <li *ngIf="descriptionInput.errors?.['required']">Name is required.</li>
+            <li *ngIf="descriptionInput.errors?.['minlength']">Name must be at least 3 charecters long.</li>
+        </ul>
+
+        <label>Image: </label>
+        <input type="text" name="imageUrl" id="imageUrl"  #imgUrlInput="ngModel" ngModel required/>
+        <ul *ngIf="imgUrlInput.invalid && imgUrlInput.touched" class="errors">
+            <li *ngIf="imgUrlInput.errors?.['required']">Name is required.</li>
+        </ul>
+
+
+        <button>Add</button>
+
+    </fieldset>
+</form>

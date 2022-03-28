@@ -12,6 +12,7 @@ import { CardComponent } from './card/card.component';
 import { UserModule } from './user/user.module';
 import { CreateComponent } from './create/create.component';
 import { DetailsComponent } from './details/details.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { DetailsComponent } from './details/details.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    UserModule
+    UserModule,
+    FormsModule
   ],
   providers: [
     CardService
