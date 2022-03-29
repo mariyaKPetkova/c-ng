@@ -1,8 +1,8 @@
 <form #form="ngForm" (ngSubmit)="loginHandler(form)">
     <fieldset>
-        <legend>Add new Cave</legend>
+        <legend>Login</legend>
 
-        <label>Email</label>
+        <label>Email: </label>
         <input type="text" name="email" id="email" #emailInput="ngModel" ngModel required email minlength="3" />
         <ul *ngIf="emailInput.invalid && emailInput.touched" class="errors">
             <li *ngIf="emailInput.errors?.['required']">Email is required.</li>
@@ -10,7 +10,7 @@
             <li *ngIf="emailInput.errors?.['minlength']">Email must be at least 3 charecters long.</li>
         </ul>
 
-        <label >Password</label>
+        <label >Password: </label>
         <input type="text" name="password" id="password" #passwordInput="ngModel" ngModel required minlength="3" />
         <ul *ngIf="passwordInput.invalid && passwordInput.touched" class="errors">
             <li *ngIf="passwordInput.errors?.['required']">Password is required.</li>

@@ -28,10 +28,10 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
     UserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule,
   ],
   providers: [
     CardService

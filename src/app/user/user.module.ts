@@ -5,6 +5,8 @@ import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UserRoutingModule } from './urer-routing.module';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from '../app-routing.module';
+import { UserService } from './user.service';
 
 
 
@@ -17,7 +19,11 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     UserRoutingModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule,
+  ],
+  providers: [
+    UserService
   ]
 })
 export class UserModule { }

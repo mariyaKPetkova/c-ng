@@ -1,8 +1,8 @@
 <form #form="ngForm" (ngSubmit)="createHandler(form)">
     <fieldset>
-        <legend>Add new Cave</legend>
+        <legend>Create</legend>
 
-        <label>Name</label>
+        <label>Name: </label>
         <input type="text" name="name" id="name" #nameInput="ngModel" ngModel required minlength="3" />
         <ul *ngIf="nameInput.invalid && nameInput.touched" class="errors">
             <li *ngIf="nameInput.errors?.['required']">Name is required.</li>
@@ -30,7 +30,7 @@
         </ul>
 
 
-        <button>Add</button>
+        <button>Create</button>
 
     </fieldset>
 </form>
