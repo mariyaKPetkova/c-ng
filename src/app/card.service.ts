@@ -16,4 +16,7 @@ export class CardService {
   loadCard(id: string): Observable<ICard>{
     return this.http.get<ICard>(`${apiUrl}/data/catalog/${id}`)
    }
+   saveCard(data: any) {
+    return this.http.post<ICard>(`${apiUrl}/data/catalog`, data, { withCredentials: true });
+  }
 }
