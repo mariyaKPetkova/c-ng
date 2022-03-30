@@ -1,7 +1,10 @@
 <div *ngIf="card">
-    <p>Details:</p>
+    <p>Name:</p>
+    
 <span>{{card.themeName}}</span>
+<p>Date: <time>{{(card!.created_at.slice(0,10)).split('-').reverse().join('.')}}</time></p>
 <div *ngFor="let post of card!.posts">
         <p>{{post.text}}</p>
+        <p><span>{{post.likes.length}}</span> likes</p>
   </div>
 </div>
