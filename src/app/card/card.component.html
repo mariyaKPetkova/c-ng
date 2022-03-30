@@ -1,6 +1,6 @@
 <li class="card">
-    <span id="name">Name:{{card?.name}}</span>
-    <span id="location">Location:{{card?.location}}</span>
-    <img src={{card?.imageUrl}} alt="">
+    <span id="name">Name:{{card?.themeName}}</span>
+    <!-- <span id="location">Location:{{card?.location}}</span>
+    <img src={{card?.imageUrl}} alt=""> -->
     <button id="details" [routerLink]="['/catalog/', card?._id]">Details</button>
 </li>

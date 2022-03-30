@@ -1,10 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { tap } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 import { IUser } from '../interfaces';
 
 
-const apiURL = 'https://caves-in-bg.herokuapp.com'
+const apiURL = environment.apiUrl
 
 @Injectable()
 export class UserService {
@@ -20,20 +21,20 @@ export class UserService {
   ) { }
 
   login(data: { email: string; password: string }) {
-    return this.http.post<IUser>(`${apiURL}/user/login`, data, { withCredentials: true }).pipe(
+    return this.http.post<IUser>(`${apiURL}/login`, data, { withCredentials: true }).pipe(
       tap((user) => this.user = user)
     );
   }
 
-  register(data: { email: string; password: string }) {
-    return this.http.post<IUser>(`${apiURL}/user/register`, data, { withCredentials: true }).pipe(
+  register(data: {username:string; email: string; password: string }) {
+    return this.http.post<IUser>(`${apiURL}/register`, data, { withCredentials: true }).pipe(
       tap((user) => this.user = user)
     );
   }
 
 
   logout() {
-    return this.http.post<IUser>(`${apiURL}/user/logout`, {}, { withCredentials: true }).pipe(
+    return this.http.post<IUser>(`${apiURL}/logout`, {}, { withCredentials: true }).pipe(
       tap(() => this.user = null)
     );
   }

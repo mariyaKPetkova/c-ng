@@ -3,13 +3,13 @@
         <legend>Create</legend>
 
         <label>Name: </label>
-        <input type="text" name="name" id="name" #nameInput="ngModel" ngModel required minlength="3" />
-        <ul *ngIf="nameInput.invalid && nameInput.touched" class="errors">
-            <li *ngIf="nameInput.errors?.['required']">Name is required.</li>
-            <li *ngIf="nameInput.errors?.['minlength']">Name must be at least 3 charecters long.</li>
+        <input type="text" name="themeName" id="themeName" #themeNameInput="ngModel" ngModel required minlength="3" />
+        <ul *ngIf="themeNameInput.invalid && themeNameInput.touched" class="errors">
+            <li *ngIf="themeNameInput.errors?.['required']">Name is required.</li>
+            <li *ngIf="themeNameInput.errors?.['minlength']">Name must be at least 3 charecters long.</li>
         </ul>
 
-        <label >Location: </label>
+        <!-- <label >Location: </label>
         <input type="text" name="location" id="location" #locationInput="ngModel" ngModel required minlength="3" />
         <ul *ngIf="locationInput.invalid && locationInput.touched" class="errors">
             <li *ngIf="locationInput.errors?.['required']">Name is required.</li>
@@ -27,7 +27,7 @@
         <input type="text" name="imageUrl" id="imageUrl"  #imgUrlInput="ngModel" ngModel required/>
         <ul *ngIf="imgUrlInput.invalid && imgUrlInput.touched" class="errors">
             <li *ngIf="imgUrlInput.errors?.['required']">Name is required.</li>
-        </ul>
+        </ul> -->
 
 
         <button>Create</button>

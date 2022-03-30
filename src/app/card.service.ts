@@ -11,12 +11,12 @@ export class CardService {
 
   constructor(private http:HttpClient) { }
   loadCardList(): Observable<ICard[]>{
-   return this.http.get<ICard[]>(`${apiUrl}/data/catalog`)
+   return this.http.get<ICard[]>(`${apiUrl}/themes`)
   }
   loadCard(id: string): Observable<ICard>{
-    return this.http.get<ICard>(`${apiUrl}/data/catalog/${id}`)
+    return this.http.get<ICard>(`${apiUrl}/themes/${id}`)
    }
    saveCard(data: any) {
-    return this.http.post<ICard>(`${apiUrl}/data/catalog`, data, { withCredentials: true });
+    return this.http.post<ICard>(`${apiUrl}/themes`, data, { withCredentials: true });
   }
 }
