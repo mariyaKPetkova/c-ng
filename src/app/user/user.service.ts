@@ -38,6 +38,16 @@ export class UserService {
       tap(() => this.user = null)
     );
   }
+  getProfileInfo() {
+    return this.http.get<IUser>(`${apiURL}/users/profile`, { withCredentials: true }).pipe(
+      tap((user) => this.user = user)
+    )
+  }
 
+  updateProfile(data: { username: string; email: string; }) {
+    return this.http.put<IUser>(`${apiURL}/users/profile`, data, { withCredentials: true }).pipe(
+      tap((user) => this.user = user)
+    );
+  }
   
 }

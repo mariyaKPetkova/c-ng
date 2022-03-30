@@ -1,8 +1,7 @@
 <div *ngIf="card">
     <p>Details:</p>
 <span>{{card.themeName}}</span>
-<!-- <span>{{card.location}}</span>
-<img src={{card.imageUrl}} alt="">
-<p>{{card.description}}</p>
-<span>Likes: {{card.likes.length}}</span> -->
+<div *ngFor="let post of card!.posts">
+        <p>{{post.text}}</p>
+  </div>
 </div>
