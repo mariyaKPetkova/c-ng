@@ -17,7 +17,7 @@ export class RegisterComponent {
 
   registerHandler(form: NgForm): void{
     if (form.invalid) { return; }
-    const { username, email, password, } = form.value;
+    const { username, email, password } = form.value;
     this.userService.register({ username, email, password}).subscribe({
       next: () => {
         const redirectUrl = '/'

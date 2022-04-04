@@ -24,12 +24,12 @@
             <li *ngIf="passwordInput.errors?.['minlength']">Password must be at least 4 charecters long.</li>
         </ul>
 
-        <label >Repeat Password: </label>
+        <!-- <label >Repeat Password: </label>
         <input type="text" name="repeatpassword" id="repeatpassword" #repeatpasswordInput="ngModel" ngModel required minlength="4" />
         <ul *ngIf="repeatpasswordInput.invalid && repeatpasswordInput.touched" class="errors">
             <li *ngIf="repeatpasswordInput.errors?.['required']">repeatPassword is required.</li>
             <li *ngIf="repeatpasswordInput.errors?.['minlength']">repeatPassword must be at least 4 charecters long.</li>
-        </ul>
+        </ul> -->
 
         <button>Register</button>
 

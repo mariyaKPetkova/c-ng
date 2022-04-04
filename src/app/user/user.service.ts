@@ -43,10 +43,4 @@ export class UserService {
     )
   }
 
-  updateProfile(data: { username: string; email: string; }) {
-    return this.http.put<IUser>(`${apiURL}/users/profile`, data, { withCredentials: true }).pipe(
-      tap((user) => this.user = user)
-    );
-  }
-  
 }
