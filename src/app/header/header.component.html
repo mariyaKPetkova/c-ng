@@ -3,15 +3,15 @@
         <section class="topnav">
             <a href="/catalog">Home</a>
 
-            <a class="button" href="/create">Create</a>
-            <a class="button" href="/profile">Profile</a>
-            <a class="button" href="/logout">Logout</a>
-
-            <a class="button" href="/login">Login</a>
-            <a class="button" href="/register">Register</a>
-
-
-
+            <div *ngIf="isLogged">
+                <a class="button" href="/create">Create</a>
+                <a class="button" href="/profile">Profile</a>
+                <a class="button" (click)="logout()" >Logout</a>
+            </div>
+            <div *ngIf="!isLogged">
+                <a class="button" href="/login">Login</a>
+                <a class="button" href="/register">Register</a>
+            </div>
         </section>
     </nav>
 </header>

@@ -32,7 +32,6 @@ export class UserService {
     );
   }
 
-
   logout() {
     return this.http.post<IUser>(`${apiURL}/logout`, {}, { withCredentials: true }).pipe(
       tap(() => this.user = null)
