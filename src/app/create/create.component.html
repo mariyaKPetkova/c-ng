@@ -27,7 +27,7 @@
             <li *ngIf="imgUrlInput.errors?.['required']">Name is required.</li>
         </ul> -->
 
-
+        <p *ngIf="errorMessage">{{errorMessage}}</p>
         <button>Create</button>
 
     </fieldset>

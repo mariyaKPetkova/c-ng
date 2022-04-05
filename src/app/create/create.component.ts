@@ -9,7 +9,7 @@ import { CardService } from '../card.service';
   styleUrls: ['./create.component.css']
 })
 export class CreateComponent {
-
+  errorMessage: string =''
   constructor(
     private contentService: CardService,
     private router: Router
@@ -24,6 +24,8 @@ export class CreateComponent {
      },
      error: (err) => {
        console.log(err);
+       const errorMess = err.error.message;
+        this.errorMessage = errorMess
      }
    })
  }
