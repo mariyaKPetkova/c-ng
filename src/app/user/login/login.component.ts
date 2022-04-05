@@ -10,9 +10,7 @@ import { UserService } from '../user.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent  {
-  get errorM(): string {
-    return this.userService.user?.username || '';
-  }
+ errorMessage: string =''
   constructor(
     private userService: UserService,
     private router : Router,
@@ -28,8 +26,9 @@ export class LoginComponent  {
         this.router.navigate([redirectUrl])
       },
       error: (err) => {
-        const errorMessage = err.error.message;
-        alert(errorMessage)
+        const errorMess = err.error.message;
+        this.errorMessage = errorMess
+        // alert(errorMess)
       }
     });
   }

@@ -31,6 +31,8 @@
             <li *ngIf="repeatpasswordInput.errors?.['minlength']">repeatPassword must be at least 4 charecters long.</li>
         </ul> -->
 
+        <p *ngIf="errorMessage">{{errorMessage}}</p>
+        
         <button>Register</button>
 
     </fieldset>

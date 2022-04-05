@@ -9,7 +9,7 @@ import { UserService } from '../user.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-
+  errorMessage: string =''
   constructor(
     private userService: UserService,
     private router : Router
@@ -24,8 +24,8 @@ export class RegisterComponent {
         this.router.navigate([redirectUrl])
       },
       error: (err) => {
-        const errorMessage = err.error.message;
-        alert(errorMessage)
+        const errorMess = err.error.message;
+        this.errorMessage = errorMess
       }
     });
   
