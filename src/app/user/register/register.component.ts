@@ -24,7 +24,8 @@ export class RegisterComponent {
         this.router.navigate([redirectUrl])
       },
       error: (err) => {
-        console.log(err);
+        const errorMessage = err.error.message;
+        alert(errorMessage)
       }
     });
   

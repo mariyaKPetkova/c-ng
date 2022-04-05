@@ -10,10 +10,13 @@ import { UserService } from '../user.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent  {
-
+  get errorM(): string {
+    return this.userService.user?.username || '';
+  }
   constructor(
     private userService: UserService,
-    private router : Router
+    private router : Router,
+
   ) { }
 
   loginHandler(form: NgForm): void{
@@ -25,7 +28,8 @@ export class LoginComponent  {
         this.router.navigate([redirectUrl])
       },
       error: (err) => {
-        console.log(err);
+        const errorMessage = err.error.message;
+        alert(errorMessage)
       }
     });
   }
