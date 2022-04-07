@@ -2,5 +2,8 @@
     <span id="name">Name:{{card?.themeName}}</span>
     <!-- <span id="location">Location:{{card?.location}}</span>
     <img src={{card?.imageUrl}} alt=""> -->
-    <button id="details" [routerLink]="['/catalog/', card?._id]">Details</button>
+    <div *ngIf="isLog">
+        <button id="details" [routerLink]="['/catalog/', card?._id]">Details</button>
+    </div>
+    
 </li>
