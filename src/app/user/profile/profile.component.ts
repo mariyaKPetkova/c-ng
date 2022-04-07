@@ -11,6 +11,9 @@ export class ProfileComponent  {
   get username(): string {
     return this.userService.user?.username || '';
   }
+  get email(): string {
+    return this.userService.user?.email || '';
+  }
   constructor(
     private userService: UserService,
   ) { }
