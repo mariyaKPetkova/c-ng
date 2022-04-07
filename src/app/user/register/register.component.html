@@ -3,25 +3,24 @@
         <legend>Register</legend>
 
         <label>Email: </label>
-        <input type="text" name="email" id="email" #emailInput="ngModel" ngModel required email minlength="4" />
+        <input type="text" name="email" id="email" #emailInput="ngModel" ngModel required email  />
         <ul *ngIf="emailInput.invalid && emailInput.touched" class="errors">
             <li *ngIf="emailInput.errors?.['required']">Email is required.</li>
             <li *ngIf="emailInput.errors?.['email']">Email is invalid.</li>
-            <li *ngIf="emailInput.errors?.['minlength']">Email must be at least 4 charecters long.</li>
         </ul>
 
         <label>Username: </label>
-        <input type="text" name="username" id="username" #usernameInput="ngModel" ngModel required minlength="4" />
+        <input type="text" name="username" id="username" #usernameInput="ngModel" ngModel required minlength="5" />
         <ul *ngIf="usernameInput.invalid && usernameInput.touched" class="errors">
             <li *ngIf="usernameInput.errors?.['required']">username is required.</li>
-            <li *ngIf="usernameInput.errors?.['minlength']">username must be at least 4 charecters long.</li>
+            <li *ngIf="usernameInput.errors?.['minlength']">username must be at least 5 charecters long.</li>
         </ul>
 
         <label >Password: </label>
-        <input type="text" name="password" id="password" #passwordInput="ngModel" ngModel required minlength="4" />
+        <input type="text" name="password" id="password" #passwordInput="ngModel" ngModel required minlength="6" />
         <ul *ngIf="passwordInput.invalid && passwordInput.touched" class="errors">
             <li *ngIf="passwordInput.errors?.['required']">Password is required.</li>
-            <li *ngIf="passwordInput.errors?.['minlength']">Password must be at least 4 charecters long.</li>
+            <li *ngIf="passwordInput.errors?.['minlength']">Password must be at least 6 charecters long.</li>
         </ul>
 
         <!-- <label >Repeat Password: </label>
