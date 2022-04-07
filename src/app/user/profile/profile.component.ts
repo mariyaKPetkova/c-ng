@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
+
 import { UserService } from '../user.service';
 
 @Component({
@@ -8,15 +10,26 @@ import { UserService } from '../user.service';
 })
 export class ProfileComponent  {
   
-  get username(): string {
-    return this.userService.user?.username || '';
+  
+  inEdit = false;
+
+  get user() {
+    return this.userService.user;
   }
-  get email(): string {
-    return this.userService.user?.email || '';
+
+  constructor(private userService: UserService) { }
+
+  updateProfile(form: NgForm): void {
+    if (form.invalid) { return; }
+    this.userService.updateProfile(form.value).subscribe({
+      next: () => {
+        this.inEdit = false;
+      },
+      error: (err) => {
+        console.error(err);
+      }
+    })
   }
-  constructor(
-    private userService: UserService,
-  ) { }
 
   
 }
