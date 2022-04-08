@@ -10,7 +10,8 @@
         </ul>
 
         <label >Description: </label>
-        <input name="postText" id="postText" #postTextInput="ngModel" ngModel required minlength="3" />
+        <textarea name="postText" id="postText" cols="30" rows="10" #postTextInput="ngModel" ngModel required minlength="3"></textarea>
+        <!-- <input name="postText" id="postText" #postTextInput="ngModel" ngModel required minlength="3" /> -->
         <ul *ngIf="postTextInput.invalid && postTextInput.touched" class="errors">
             <li *ngIf="postTextInput.errors?.['required']">Description is required.</li>
             <li *ngIf="postTextInput.errors?.['minlength']">Description must be at least 3 charecters long.</li>

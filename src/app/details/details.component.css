@@ -1,0 +1,25 @@
+#cardInfo{
+    border: solid 1px #014421;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(114, 241, 125, 0.2);
+    width: 600px;
+    height: 530px;
+    
+}
+#cardInfo, p, legend{
+    margin: 40px;
+}
+legend{
+    font-weight: bold;
+}
+#cardDescription{
+    margin-bottom: 150px;
+    width: 500px;
+    height: 30px;
+}
+#cardDate, #cardAuthor{
+    font-size: 12px;
+    font-weight: bold;
+    margin: 20px 40px;
+}
+

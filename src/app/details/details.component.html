@@ -1,8 +1,10 @@
-<div *ngIf="card">
-   <p>Name:{{card.themeName}}</p>
-<p>Date: <time>{{(card!.created_at.slice(0,10)).split('-').reverse().join('.')}}</time></p>
-<div *ngFor="let post of card!.posts">
-        <p>{{post.text}}</p>
-        <p>{{post.userId.username}}</p>
-  </div>
+<div id="cardInfo" *ngIf="card">
+   <legend>Name:</legend>
+   <p id="cardName">{{card.themeName}}</p>
+   <div *ngFor="let post of card!.posts">
+      <legend>Description:</legend>
+      <p id="cardDescription">{{post.text}}</p>
+      <p id="cardDate">Date: <time>{{(card!.created_at.slice(0,10)).split('-').reverse().join('.')}}</time></p>
+      <p id="cardAuthor">Author: {{post.userId.username}}</p>
+   </div>
 </div>

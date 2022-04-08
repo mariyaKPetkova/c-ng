@@ -5,6 +5,7 @@ fieldset label{
 legend{
     font-size: 24px;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 fieldset button{
     display: flex;

@@ -1,13 +1,13 @@
-<div>
+<div id="profile">
     
     <ng-container *ngIf="inEdit">
       <form #form="ngForm" (ngSubmit)="updateProfile(form)">
         <div class="flex">
-          <p>Username: </p>
+          <p class="text-description">Username: </p>
           <input type="text" name="username" id="username" [ngModel]="user!.username">
         </div>
         <div class="flex">
-          <p>Email: </p>
+          <p class="text-description">Email: </p>
           <input type="email" name="email" id="email" [ngModel]="user!.email">
         </div>
         
@@ -17,11 +17,11 @@
     </ng-container>
     <ng-container>
       <div class="flex">
-        <p>Username: </p>
+        <p class="text-description">Username: </p>
         <p>{{user!.username}}</p>
       </div>
       <div class="flex">
-        <p>Email: </p>
+        <p class="text-description">Email: </p>
         <p>{{user!.email}}</p>
       </div>
       
