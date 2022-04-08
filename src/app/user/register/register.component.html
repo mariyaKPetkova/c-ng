@@ -13,11 +13,11 @@
         <input type="text" name="username" id="username" #usernameInput="ngModel" ngModel required minlength="5" />
         <ul *ngIf="usernameInput.invalid && usernameInput.touched" class="errors">
             <li *ngIf="usernameInput.errors?.['required']">Username is required.</li>
-            <li *ngIf="usernameInput.errors?.['minlength']">Uername must be at least 5 charecters long.</li>
+            <li *ngIf="usernameInput.errors?.['minlength']">Username must be at least 5 charecters long.</li>
         </ul>
 
         <label >Password: </label>
-        <input type="text" name="password" id="password" #passwordInput="ngModel" ngModel required minlength="6" />
+        <input type="password" name="password" id="password" #passwordInput="ngModel" ngModel required minlength="6" />
         <ul *ngIf="passwordInput.invalid && passwordInput.touched" class="errors">
             <li *ngIf="passwordInput.errors?.['required']">Password is required.</li>
             <li *ngIf="passwordInput.errors?.['minlength']">Password must be at least 6 charecters long.</li>
