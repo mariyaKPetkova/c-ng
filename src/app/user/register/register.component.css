@@ -1,0 +1,38 @@
+fieldset label{
+    display: flex;
+    margin: 20px 4px;
+}
+legend{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+fieldset button{
+    display: flex;
+    margin: 40px 0px ;
+}
+fieldset{
+    margin: 50px;
+}
+button{
+    text-decoration-line: none;
+    color: rgb(249, 250, 249);
+    text-align: center;
+    background-color: #0fa15d;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 170px;
+}
+button:hover {
+    background-color: rgb(192, 253, 190);
+    color: #014421;
+    transition: 0.5s;
+  }
+ul li {
+    color: red;
+    margin: 10px 0px;
+}
+input{
+    width: 300px;
+    padding: 4px;
+}
